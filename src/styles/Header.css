@@ -1,0 +1,54 @@
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+
+	position: relative;
+}
+
+.logo-wrapper > span {
+	color: #000;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+
+	position: absolute;
+	left: 22px;
+}
+
+.account-management {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.account-management > #userName {
+	margin-left: 10px;
+}
+
+.account-management > .separator {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.account-management > #exitBtn {
+	color: #52555f;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.48px;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: auto;
+	text-underline-offset: auto;
+	text-underline-position: from-font;
+
+    cursor: pointer;
+}
