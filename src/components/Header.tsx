@@ -13,7 +13,7 @@ function Header() {
 				<span>InvestIQ</span>
 			</div>
 
-			<div className="account-management">
+			<div style={{display: "none"}} className="account-management">
                 <img src={defaultUser} alt="Default User Icon" />
                 <span id='userName'>User Name</span>
 

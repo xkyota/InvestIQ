@@ -1,0 +1,89 @@
+.registration {
+	width: 436px;
+	height: 535px;
+
+	border-radius: 30px;
+	background: #fff;
+	box-shadow: 0 10px 60px 0 rgba(170, 178, 197, 0.2);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 50px 85px;
+}
+
+.registration > span {
+	display: block;
+
+	color: #52555f;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.48px;
+}
+
+.registration > span:last-of-type {
+	margin-bottom: 20px;
+}
+
+form label {
+	color: #000;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.48px;
+
+    margin-bottom: 10px;
+}
+
+form input {
+	border-radius: 30px;
+	background: #f6f7fb;
+
+	width: 265px;
+	height: 52px;
+
+	padding: 17px 20px;
+    margin-bottom: 30px;
+}
+
+form > div:last-child{ 
+    margin-top: 10px;
+}
+
+form button {
+	width: 125px;
+	height: 44px;
+
+	border-radius: 16px;
+	background: #ff751d;
+
+	color: #fff;
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.24px;
+	text-transform: uppercase;
+}
+
+form button:last-child {
+	background: #f5f6fb;
+	margin-left: 15px;
+
+	color: #52555f;
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.24px;
+	text-transform: uppercase;
+}

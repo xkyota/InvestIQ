@@ -1,12 +1,18 @@
 import '../styles/App.css';
 
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 import Header from '../components/Header';
+import Registration from './Registration';
 
 function App() {
 	return (
-		<header className='section-header'>
-			<Header></Header>
-		</header>
+		<GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+			<header className="section-header">
+				<Header></Header>
+			</header>
+			<Registration></Registration>
+		</GoogleOAuthProvider>
 	);
 }
 
