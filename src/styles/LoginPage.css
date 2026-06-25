@@ -1,0 +1,144 @@
+.login-page {
+	position: relative;
+	z-index: 0;
+	min-height: calc(100dvh - 56px);
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 80px 24px 92px;
+}
+
+.dimmed-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 582.5px;
+	height: 72%;
+	background-color: #f5f6fb;
+	z-index: -1;
+}
+
+.background-decoration {
+	width: 100%;
+	height: 252.559px;
+	background: url("../assets/Login-background.png");
+	background-repeat: repeat;
+	background-size: contain;
+}
+
+.wrapper {
+	width: min(940px, 100%);
+
+	display: flex;
+
+	justify-content: space-between;
+	align-items: center;
+	gap: 48px;
+}
+
+.company {
+	flex: 1 1 380px;
+	text-align: center;
+}
+
+.company > h1 {
+	color: #000;
+	font-family: "Roboto", sans-serif;
+	font-size: clamp(72px, 7.97vw, 102px);
+	font-style: normal;
+	font-weight: 900;
+	line-height: 1.05;
+}
+
+.company > span {
+	color: #52555f;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 2.88px;
+	text-transform: uppercase;
+}
+
+.decorations {
+	position: relative;
+	z-index: 1;
+	width: 198px;
+	margin-top: -66px;
+	margin-left: clamp(40px, 18vw, 230px);
+}
+
+@media (max-width: 900px) {
+	.login-page {
+		justify-content: flex-start;
+		padding: 82px 32px 88px;
+	}
+
+	.dimmed-background {
+		height: 100%;
+	}
+
+	.wrapper {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 52px;
+	}
+
+	.company {
+		flex: 0 1 auto;
+	}
+
+	.company > h1 {
+		font-size: 102px;
+	}
+
+	.decorations {
+		width: 183px;
+		margin-top: -48px;
+		margin-left: clamp(120px, 38vw, 292px);
+	}
+}
+
+@media (max-width: 560px) {
+	.login-page {
+		min-height: calc(100dvh - 56px);
+		padding: 72px 20px 56px;
+	}
+
+	.background-decoration {
+		height: 212px;
+		background-size: auto 212px;
+	}
+
+	.wrapper {
+		gap: 44px;
+	}
+
+	.company > h1 {
+		font-size: clamp(52px, 19vw, 76px);
+	}
+
+	.company > span {
+		font-size: 13px;
+		letter-spacing: 2.34px;
+	}
+
+	.decorations {
+		width: 84px;
+		margin-top: -28px;
+		margin-left: clamp(164px, 52vw, 220px);
+	}
+}
+
+@media (max-width: 360px) {
+	.login-page {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+}

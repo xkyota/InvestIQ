@@ -1,18 +1,24 @@
 import '../styles/App.css';
 
-import { GoogleOAuthProvider } from '@react-oauth/google';
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from 'react-router-dom';
 
-import Header from '../components/Header';
-import Registration from './Registration';
+// import Header from '../components/Header';
+// import Registration from './Registration';
+import LoginPage from '../pages/LoginPage';
+import NotFoundPage from '../pages/NotFoundPage';
 
 function App() {
 	return (
-		<GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
-			<header className="section-header">
-				<Header></Header>
-			</header>
-			<Registration></Registration>
-		</GoogleOAuthProvider>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<LoginPage />} />
+				<Route path="*" element={<NotFoundPage />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 

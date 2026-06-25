@@ -13,17 +13,19 @@ function Registration() {
 	}
 
 	return (
-		<div className='registration'>
+		<div className="registration">
 			<span>Ви можете авторизуватися за допомогою акаунта Google</span>
 
-			<GoogleLogin 
-				onSuccess={(credentialResponse) => {
-					console.log(credentialResponse.credential);
-				}}
-				onError={() => {
-					console.log("Login Failed");
-				}}
-			/>
+			<div className="button-wrapper">
+				<GoogleLogin
+					onSuccess={(credentialResponse) => {
+						console.log(credentialResponse.credential);
+					}}
+					onError={() => {
+						console.log("Login Failed");
+					}}
+				/>
+			</div>
 
 			<span>
 				Або увійти за допомогою ел. пошти та праолю після реєстрації
