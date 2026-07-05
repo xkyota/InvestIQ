@@ -28,6 +28,10 @@
 
 .account-management > #userName {
 	margin-left: 10px;
+	color: #52555f;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.48px;
 }
 
 .account-management > .separator {
@@ -50,5 +54,16 @@
 	text-underline-offset: auto;
 	text-underline-position: from-font;
 
-    cursor: pointer;
+	cursor: pointer;
+}
+
+@media (max-width: 560px) {
+	.account-management > #userName,
+	.account-management > .separator {
+		display: none;
+	}
+
+	.account-management > #exitBtn {
+		margin-left: 12px;
+	}
 }

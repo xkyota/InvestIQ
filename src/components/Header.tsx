@@ -1,11 +1,17 @@
 import '../styles/Header.css';
 
+import { Link } from 'react-router';
+
 //! Images
 import defaultUser from '../assets/default-user.svg';
 import logo from '../assets/logo.svg';
 import separator from '../assets/separator.svg';
 
-function Header() {
+type HeaderProps = {
+	showAccount?: boolean;
+};
+
+function Header({ showAccount = false }: HeaderProps) {
 	return (
 		<>
 			<div className="logo-wrapper">
@@ -13,13 +19,17 @@ function Header() {
 				<span>InvestIQ</span>
 			</div>
 
-			<div style={{display: "none"}} className="account-management">
-                <img src={defaultUser} alt="Default User Icon" />
-                <span id='userName'>User Name</span>
+			<div
+				className="account-management"
+				style={{ display: showAccount ? 'flex' : 'none' }}
+			>
+				<img src={defaultUser} alt="Default User Icon" />
+				<span id="userName">User Name</span>
 
-                <img className='separator' src={separator} alt="" />
-                <span id='exitBtn'>Вийти</span>
-            </div>
+				<img className="separator" src={separator} alt="" />
+
+				<Link to="/" id="exitBtn">Вийти</Link>
+			</div>
 		</>
 	);
 }
