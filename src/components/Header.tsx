@@ -3,9 +3,9 @@ import '../styles/Header.css';
 import { Link } from 'react-router';
 
 //! Images
-import defaultUser from '../assets/default-user.svg';
-import logo from '../assets/logo.svg';
-import separator from '../assets/separator.svg';
+import defaultUser from '../assets/images/avatars/default-user.svg';
+import logo from '../assets/icons/logo.svg';
+import separator from '../assets/icons/separator.svg';
 
 type HeaderProps = {
 	showAccount?: boolean;

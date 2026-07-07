@@ -2,7 +2,7 @@ import '../styles/LoginPage.css';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-import LoginDecoration from '../assets/Login-decoration.png';
+import LoginDecoration from '../assets/images/illustrations/Login-decoration.png';
 import Header from '../components/Header';
 import Registration from '../components/Registration';
 
