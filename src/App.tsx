@@ -1,4 +1,4 @@
-import '../styles/App.css';
+import './styles/App.css';
 
 import {
   BrowserRouter,
@@ -8,9 +8,9 @@ import {
 
 // import Header from '../components/Header';
 // import Registration from './Registration';
-import LoginPage from '../pages/LoginPage';
-import MainPage from '../pages/MainPage';
-import NotFoundPage from '../pages/NotFoundPage';
+import LoginPage from './pages/LoginPage';
+import MainPage from './pages/MainPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
 	return (
