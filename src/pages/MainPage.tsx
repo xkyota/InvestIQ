@@ -11,17 +11,8 @@ import {
 import { TbCalculator } from 'react-icons/tb';
 
 import Header from '../components/Header';
-
-type TransactionType = "expense" | "income";
-
-type Transaction = {
-	id: number;
-	date: string;
-	description: string;
-	category: string;
-	amount: number;
-	type: TransactionType;
-};
+import { Link } from 'react-router-dom';
+import { useBudget, type Transaction, type TransactionType } from '../context/BudgetContext';
 
 const expenseCategories = [
 	"Транспорт",
@@ -32,8 +23,6 @@ const expenseCategories = [
 ];
 
 const incomeCategories = ["Зарплата", "Додатковий дохід", "Подарунок", "Інше"];
-
-const initialTransactions: Transaction[] = [];
 
 const summary = [
 	{ month: "ЛИСТОПАД", amount: 0 },
@@ -57,13 +46,11 @@ function getCurrentDate() {
 
 function MainPage() {
 	const [activeTab, setActiveTab] = useState<TransactionType>("expense");
-	const [balance, setBalance] = useState(0);
+	const { balance, setBalance, transactions, setTransactions } = useBudget();
 	const [balanceInput, setBalanceInput] = useState("0");
 	const [description, setDescription] = useState("");
 	const [category, setCategory] = useState("");
 	const [amount, setAmount] = useState("");
-	const [transactions, setTransactions] =
-		useState<Transaction[]>(initialTransactions);
 
 	const categories =
 		activeTab === "expense" ? expenseCategories : incomeCategories;
@@ -176,10 +163,10 @@ function MainPage() {
 							</button>
 						</div>
 
-						<a className="reports-link" href="#summary">
+						<Link className="reports-link" to="/take-stock">
 							<span>Перейти до розрахунків</span>
 							<FiBarChart2></FiBarChart2>
-						</a>
+						</Link>
 					</section>
 
 					<div className="transaction-tabs">

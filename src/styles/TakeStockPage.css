@@ -1,0 +1,218 @@
+.take-stock-page {
+	min-height: calc(100dvh - 56px);
+	padding: 38px 16px 72px;
+	background: #f5f6fb;
+	font-family: "Roboto", sans-serif;
+}
+
+.take-stock-wrapper {
+	width: min(1060px, 100%);
+	margin: 0 auto;
+}
+
+.take-stock-toolbar {
+	position: relative;
+	min-height: 63px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.back-home {
+	position: absolute;
+	left: 0;
+	top: 13px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	color: #52555f;
+	font-size: 12px;
+}
+
+.back-home svg {
+	width: 18px;
+	height: 18px;
+	color: #ff751d;
+}
+.back-home:hover span,
+.back-home:focus-visible span {
+	color: #ff751d;
+}
+
+.take-stock-balance {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.take-stock-balance label,
+.period-picker {
+	color: #52555f;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.take-stock-balance-input,
+.take-stock-balance > button {
+	width: 125px;
+	height: 44px;
+	border: 2px solid #fff;
+	border-radius: 16px;
+	background: transparent;
+}
+
+.take-stock-balance-input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
+}
+.take-stock-balance-input input {
+	width: 72px;
+	padding: 0;
+	background: transparent;
+	text-align: right;
+	font-size: 12px;
+	font-weight: 700;
+}
+.take-stock-balance-input input::-webkit-inner-spin-button,
+.take-stock-balance-input input::-webkit-outer-spin-button {
+	appearance: none;
+}
+.take-stock-balance-input span {
+	margin-left: 4px;
+	font-size: 12px;
+	font-weight: 700;
+}
+.take-stock-balance > button {
+	color: #52555f;
+	font-size: 12px;
+	font-weight: 500;
+}
+.take-stock-balance > button:hover,
+.take-stock-balance > button:focus-visible {
+	color: #ff751d;
+	background: #fff;
+}
+
+.period-picker {
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+}
+.period-picker > span {
+	display: block;
+	margin-bottom: 2px;
+}
+.period-picker > div {
+	display: flex;
+	align-items: center;
+	gap: 13px;
+}
+.period-picker button {
+	padding: 4px;
+	background: transparent;
+	color: #ff751d;
+}
+.period-picker button svg {
+	width: 18px;
+	height: 18px;
+}
+.period-picker strong {
+	min-width: 92px;
+	color: #000;
+	font-size: 14px;
+	line-height: 17px;
+}
+.period-picker small {
+	display: block;
+	font-size: 14px;
+}
+
+.period-summary {
+	min-height: 50px;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	box-shadow: 0 10px 60px rgba(170, 178, 197, 0.2);
+	color: #52555f;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.period-summary p {
+	min-width: 280px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.period-summary p + p {
+	border-left: 1px solid #e0e5eb;
+}
+.period-summary strong.expense {
+	color: #e53935;
+}
+.period-summary strong.income {
+	color: #407946;
+}
+
+@media (max-width: 760px) {
+	.take-stock-page {
+		padding: 28px 20px 50px;
+	}
+	.take-stock-toolbar {
+		min-height: 190px;
+		display: block;
+	}
+	.back-home {
+		top: 0;
+	}
+	.take-stock-balance {
+		position: absolute;
+		top: 48px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.take-stock-balance label {
+		position: absolute;
+		top: -22px;
+		width: 100%;
+		text-align: center;
+	}
+	.period-picker {
+		top: 112px;
+		left: 50%;
+		right: auto;
+		transform: translateX(-50%);
+	}
+	.period-summary {
+		padding: 10px 20px;
+		flex-direction: column;
+	}
+	.period-summary p {
+		width: 100%;
+		min-width: 0;
+		padding: 10px 0;
+	}
+	.period-summary p + p {
+		border-top: 1px solid #e0e5eb;
+		border-left: 0;
+	}
+}
+
+@media (max-width: 430px) {
+	.back-home span {
+		display: none;
+	}
+	.take-stock-balance {
+		gap: 0;
+	}
+	.take-stock-balance-input {
+		border-radius: 16px 0 0 16px;
+	}
+	.take-stock-balance > button {
+		border-radius: 0 16px 16px 0;
+	}
+}
